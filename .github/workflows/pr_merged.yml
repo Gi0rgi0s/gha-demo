@@ -3,7 +3,6 @@ name: MRE Orchestration Plugin Helper Stack CI/CD
 
 on:
   pull_request:
-     branches: ['main']
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
