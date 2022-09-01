@@ -1,6 +1,5 @@
 
-name: Merge ${{ github.event_name }} - MRE
-
+name: PR Merged
 on:
   pull_request:
     types:

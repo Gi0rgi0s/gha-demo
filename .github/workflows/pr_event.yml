@@ -1,6 +1,5 @@
 
-name: PR ${{ github.event_name }} - MRE
-
+name: Open PR Event
 on:
   pull_request:
 
