@@ -3,20 +3,11 @@ name: MRE Orchestration Plugin Helper Stack CI/CD
 
 on:
   pull_request:
-    types:
-      - opened
-      - reopened
-      - edited
-      - closed
-
     branches:
-      - 'main'
-
-
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  pr_opened:
+  pr_event:
     if: github.event.pull_request.merged == false
 
     # The type of runner that the job will run on
