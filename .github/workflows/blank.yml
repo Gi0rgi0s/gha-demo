@@ -6,7 +6,7 @@ on:
     types:
       - opened
       - reopened
-      - updated
+      - edited
       - closed
 
     branches:
