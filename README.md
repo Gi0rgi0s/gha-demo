@@ -1,5 +1,6 @@
 more to come
 
+8 PR opened worked, Testing updating head branch
 7 PR edit failed, updating script
 6 PR merged worked, testing PR edited
 5 testing PR edited, PR merged
