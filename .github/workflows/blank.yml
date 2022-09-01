@@ -7,6 +7,8 @@ on:
       - opened
       - reopened
       - updated
+      - closed
+
     branches:
       - 'main'
 
@@ -15,6 +17,8 @@ on:
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   pr_opened:
+    if: github.event.pull_request.merged == false
+
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
     # Steps represent a sequence of tasks that will be executed as part of the job
@@ -39,17 +43,9 @@ jobs:
     # if_merged:
     #   if: github.event.pull_request.merged == true
 
-
-
-# on:
-#   pull_request:
-#     types:
-#       - closed
-
-# jobs:
-#   if_merged:
-#     if: github.event.pull_request.merged == true
-#     runs-on: ubuntu-latest
-#     steps:
-#     - run: |
-#         echo The PR was merged
+  if_merged:
+    if: github.event.pull_request.merged == true
+    runs-on: ubuntu-latest
+    steps:
+    - run: |
+        echo The PR was merged
